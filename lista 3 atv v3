@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void ExibeEntrada(idade){
+  int altura;
+  if (idade<18){
+    printf("\nDiga a sua altura");
+    scanf("%d", &altura);
+    if (altura<150){
+      printf("\nNão pode entrar");
+    }
+    else{
+      printf("\nPode entrar");
+    }
+  }
+  else{
+    printf("\nPode entrar");
+    if (idade>=65){
+      printf("\nCuidado com a velocidade");
+    }
+  }
+  return;
+}
+
+int main(void){
+  int idade;
+  printf("\nDiga a sua idade:");
+  scanf("%d", &idade);
+  ExibeEntrada(idade);
+}
