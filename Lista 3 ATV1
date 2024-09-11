@@ -67,15 +67,11 @@ void TabelaTres(int curso,int matricula){
   int num_inicial, num_final;
   num_inicial = matricula/100;
   num_final = matricula % 10;
-  if (curso==1){
-    if(ehPar(num_inicial)){
+  if (curso==1 && ehpar(ehPar(num_inicial)){
      printf("\nA sua sala é a 13");
-    }
   }
-  else if(curso==3){
-    if(ehPar(num_final)){
+  else if(curso==3 && ehPar(num_final)){
       printf("\nSua sala é a 14");
-    }
   }
   else{
     printf("\nSua sala é a 2");
@@ -87,15 +83,8 @@ void TabelaQuatro(int curso,int matricula){
   int num_inicial, num_final;
   num_inicial = matricula/100;
   num_final = matricula % 10;
-  if (curso==1){
-    if(ehPar(num_inicial)){
+  if (curso==1 && ehPar(num_inicial) || curso==3 && ehpar(num_final)){
      printf("\nA sua sala é a 13");
-    }
-  }
-  else if(curso==3){
-    if(ehPar(num_final)){
-      printf("\nSua sala é a 13");
-    }
   }
   else{
     printf("\nSua sala é a 2");
