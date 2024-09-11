@@ -1,0 +1,119 @@
+#include <stdio.h>
+
+int ehPar(int numero){
+  return numero%2==0;
+}
+void TabelaUm(int curso,int matricula){
+  int num_inicial, num_final;
+  num_inicial = matricula/100;
+  num_final = matricula % 10;
+  if (ehPar(num_inicial)){
+    printf("\nA sua sala é a 11");
+  }
+  else if(curso==1){
+    printf("\nA sala ém 32");
+  }
+  else{
+   if(ehPar(num_final)){
+  printf("\nA sala é 24");
+   }
+    else{
+      printf("\nA sala é 33");
+  }
+  return;
+  }
+} 
+
+void TabelaDois(int curso,int matricula){
+  int num_inicial, num_final;
+  num_inicial = matricula/100;
+  num_final = matricula % 10;
+  if (ehPar(num_inicial)){
+    if (curso==1){
+      printf("\nA sua sala é a 13");
+    }
+    else if (curso==2){
+      printf("\nA sua sala é a 17");
+    }
+    else{
+      printf("\nA sua sala é a 19");
+    }
+  }
+  else if (ehPar(num_final)){
+    if (curso==1){
+      printf("\nA sua sala é a 32");
+    }
+    else if (curso==2){
+      printf("\nA sua sala é a 28");
+    }
+    else{
+      printf("\nA sua sala é a 24");
+    }
+  }
+  else{
+    if (curso==1){
+      printf("\nA sua sala é a 35");
+    }
+    else if (curso==2){
+      printf("\nA sua sala é a 33");
+    }
+    else{
+      printf("\nA sua sala é a 43");
+    }
+  }
+}
+
+void TabelaTres(int curso,int matricula){
+  int num_inicial, num_final;
+  num_inicial = matricula/100;
+  num_final = matricula % 10;
+  if (curso==1){
+    if(ehPar(num_inicial)){
+     printf("\nA sua sala é a 13");
+    }
+  }
+  else if(curso==3){
+    if(ehPar(num_final)){
+      printf("\nSua sala é a 14");
+    }
+  }
+  else{
+    printf("\nSua sala é a 2");
+  }
+  return;
+}
+
+void TabelaQuatro(int curso,int matricula){
+  int num_inicial, num_final;
+  num_inicial = matricula/100;
+  num_final = matricula % 10;
+  if (curso==1){
+    if(ehPar(num_inicial)){
+     printf("\nA sua sala é a 13");
+    }
+  }
+  else if(curso==3){
+    if(ehPar(num_final)){
+      printf("\nSua sala é a 13");
+    }
+  }
+  else{
+    printf("\nSua sala é a 2");
+  }
+  return;
+}
+
+
+int main(void) {
+  int matricula, curso, num_inicial, num_final;
+  printf("\nDiga o número de sua matŕicula:");
+  scanf("%d", &matricula);
+  printf("\nDiga o seu curso:");
+  scanf("%d", &curso);
+  TabelaUm(curso, matricula);
+  TabelaDois(curso, matricula);
+  TabelaTres(curso,matricula);
+  TabelaQuatro(curso,matricula);
+  
+  return 0;
+}
